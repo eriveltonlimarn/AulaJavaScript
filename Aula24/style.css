@@ -1,0 +1,21 @@
+/* Global styles come from external css https://codepen.io/GreenSock/pen/qEWKyrL.css */
+
+body {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  min-height: 100vh;
+  margin: 2rem;
+  overflow: hidden;
+}
+
+.box {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: green; /* já que você colocou a classe "green" */
+  display: block;
+}
+
+

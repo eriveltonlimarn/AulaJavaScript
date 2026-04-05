@@ -1,0 +1,15 @@
+#myButton{
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer
+    transition: background-color 0.5 ease;
+  }
+
+#myButton.active{
+    background-color: #84b929;
+    color: white;
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erivelton Lima - Portfólio</title>
+    
+    <!-- Meta tags de SEO -->
+    <meta name="description" content="Portfólio de Erivelton Lima - Desenvolvedor Front-end especializado em React, HTML, CSS e soluções digitais inovadoras.">
+    <meta name="keywords" content="Erivelton Lima, Portfólio, Desenvolvedor Front-end, React, HTML, CSS, JavaScript">
+    <meta name="author" content="Erivelton Lima">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- CDN (Content Delivery Network) da biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor do Mouse Animado-->
+    <div class="pacman-cursor">
+    <div class="pacman-boca"></div>
+    </div>
+
+    <!-- Header / Navegação -->
+<header>
+    <div class="brand">
+        <div class="logo-img">
+            <img src="./assets/logos/logo.webp" alt="Logo Erivelton Lima">
+        </div>
+        <div class="logo">Erivelton Lima</div>
+    </div>
+    <!-- Menu Mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero / Primeira Tela -->
+    <section id="home" class="hero">
+        <h1>Desenvolvedor Full-Stack</h1>
+        <p>Transformando ideias em experiências digitais incríveis</p>
+        <a href="#projetos" class="cta">Ver Projetos</a>
+    </section>
+
+    <!-- Sobre -->
+   <section id="sobre" class="sobre">
+    <h1 class="sobre-titulo">Sobre Mim</h1>
+
+    <div class="sobre-container">
+        <div class="sobre-conteudo">
+            <h2>Erivelton X Lima</h2>
+            <h3>Especialista em Tecnologia | Desenvolvedor Front-end | Professor Universitário</h3><br>
+            <p>Com mais de 25 anos de trajetória na linha de frente da tecnologia, minha carreira é marcada pela versatilidade e pela capacidade de resolver problemas complexos. De perito em Computação Forense a Desenvolvedor Front-end, utilizo minha base sólida em infraestrutura e segurança para criar soluções digitais que não são apenas visualmente incríveis, mas tecnicamente robustas e seguras.
+
+            Como docente desde 1999 e coordenador acadêmico, desenvolvi a habilidade única de traduzir conceitos técnicos abstratos em resultados práticos, liderando equipes de desenvolvimento e suporte (NOC/SOC) sob metodologias ágeis. Minha missão atual é fundir a agilidade do React e ecossistema Front-end com o rigor do DevSecOps e Cloud Computing.</p>
+            
+            <div class="skills">
+                <span>React</span>
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                    <span>Nodejs</span>
+                    <span>Java</span>
+                    <span>SQL/MongoDB</span>
+            </div>
+            <div class="skills">
+                <span>DevSecOps</span>
+                    <span>Cybersegurança</span>
+                    <span>Perito Forense</span>
+                    <span>Big Data</span>
+                    <span>Cloud</span>
+                    <span>Auditoria</span>    
+            </div>
+        </div>
+
+        <div class="sobre-img-container">
+            <img src="./assets/images/erivelton.webp" alt="Erivelton Lima">
+        </div>
+    </div>
+</section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
+        <div class="carousel">
+            <div class="project">
+                <img src="assets/images/projeto1.webp" alt="Projeto 1">
+                <div class="project-info">
+                    <h3>Projeto 1</h3>
+                    <p>React, HTML, CSS</p>
+                    <a href="https://github.com/eriveltonlimarn" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/projeto2.webp" alt="Projeto 2">
+                <div class="project-info">
+                    <h3>Projeto 2</h3>
+                    <p>JavaScript, CSS</p>
+                    <a href="https://github.com/eriveltonlimarn" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/projeto3.webp" alt="Projeto 3">
+                <div class="project-info">
+                    <h3>Projeto 3</h3>
+                    <p>React, Tailwind</p>
+                    <a href="https://github.com/eriveltonlimarn" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clientes & Depoimentos -->
+    <section id="clientes" class="clientes">
+        <h2>Clientes & Depoimentos</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="./assets/images/testemunho1.webp" alt="Mercadinho Xavier">
+                <p>"O Erivelton possui uma capacidade analítica fora do comum. Ele não apenas escreve código limpo, mas entende a arquitetura por trás da solução, entregando sistemas robustos e fáceis de manter. Um desenvolvedor completo."</p>
+                <span>- Mercadinho Xavier</span>
+            </div>
+            <div class="testimonial">
+                <img src="./assets/images/testemunho2.webp" alt="Mercadinho Linhares">
+                <p>"Além do domínio técnico em Java e Kotlin, o Erivelton tem o dom de transmitir conhecimento. Sua liderança técnica e visão estratégica transformaram a dinâmica da nossa equipe, elevando o nível de entrega de todos ao redor."</p>
+                <span>- Mercadinho Linhares</span>
+            </div>
+            <div class="testimonial">
+                <img src="./assets/images/testemunho3.webp" alt="BR Equipadora">
+                <p>"rabalhar com o Erivelton é ter a certeza de que a inovação será prioridade. Ele trouxe soluções de automação que otimizaram nossos processos em tempo recorde. Criatividade e competência técnica em um só profissional."</p>
+                <span>- BR Equipadora</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+<section id="contato" class="contato">
+    <h2>Contato</h2>
+    <p>Vamos conversar sobre seu próximo projeto!</p>
+
+    <div class="support-container">
+        <div class="support-card">
+            <i class="fas fa-comments"></i>
+            <h3>Chat em Tempo Real</h3>
+            <p>Disponível para suporte imediato via widget.</p>
+        </div>
+        <div class="support-card">
+            <i class="fab fa-whatsapp"></i>
+            <h3>WhatsApp Direto</h3>
+            <p>Clique no botão flutuante para uma conversa rápida.</p>
+        </div>
+    </div><br>
+
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="1b3c0d35-85f8-4e83-88e3-2b0db70dbada">
+        
+        <input type="hidden" name="from_name" value="Meu Portfólio - Erivelton Lima">
+        <input type="hidden" name="replyto" value="eriveltonlimarn@gmail.com">
+        <input type="hidden" name="subject" value="Novo contato do Portfólio">
+
+        <input type="text" name="name" placeholder="Digite seu Nome" required>
+        <input type="email" name="email" placeholder="Digite seu E-Mail" required>
+        <textarea name="message" placeholder="Digite sua Mensagem" required></textarea>
+        
+        <button type="submit">Enviar Mensagem</button>
+        <p class="form-msg"></p>
+    </form>        
+</section>
+
+    <!-- Suporte via Whatsapp -->
+    <a href="https://wa.link/da71jk" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Fale comigo</span>
+    </a>
+
+    <!-- Footer -->
+<footer>
+    <p>&copy; 2026 Erivelton Lima | Todos os direitos reservados</p>
+    <div class="socials">
+        <a href="https://github.com/eriveltonlimarn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/erivelton-lima-b2259588/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.instagram.com/prof.eriveltonlimarn/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://linktr.ee/proferiveltonlima" target="_blank"><i class="fas fa-tree"></i> Linktree</a>
+        <a href="https://www.youtube.com/@EriveltonLimarn" target="_blank"><i class="fab fa-youtube"></i> Youtube</a>
+        <a href="https://www.facebook.com/eriveltonlima/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://x.com/eriveltonlima" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
+        <a href="http://lattes.cnpq.br/3035830165855200" target="_blank"><i class="fas fa-graduation-cap"></i> Lattes</a>
+    </div>
+</footer>
+
+    <!-- JS Libraries via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+    </script>
+    
+    <!-- Código principal -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+/* Reset básico */
+* { 
+  margin: 0;                   /* Remove margens de todos os elementos */
+  padding: 0;                  /* Remove preenchimentos de todos os elementos */
+  box-sizing: border-box;      /* Garante que padding/border não aumentem a largura total */
+}
+
+body { 
+  font-family: 'Roboto', sans-serif; /* Define a fonte principal */
+  background: #f5f5f5;               /* Cor de fundo cinza claro */
+  color: #333;                       /* Cor do texto principal */
+  line-height: 1.6;                  /* Altura da linha para melhor leitura */
+  scroll-behavior: smooth;           /* Rolagem suave ao navegar pelos links */
+}
+
+/* Header */
+header { 
+  display: flex;                    /* Ativa layout flexível */
+  justify-content: space-between;   /* Espaça logo e nav nas extremidades */
+  align-items: center;              /* Alinha os itens verticalmente ao centro */
+  padding: 1rem 5%;                 /* Espaçamento interno: 1rem topo/base, 5% laterais */
+  background: #2C2C54;              /* Cor de fundo azul escuro */
+  color: white;                     /* Cor do texto branca */
+  position: fixed;                  /* Fixa o menu no topo ao rolar */
+  width: 100%;                      /* Garante que o menu ocupe toda a largura */
+  z-index: 100;                     /* Mantém o menu acima de todos os elementos */
+}
+
+/* Este grupo mantém a logo e o nome colados */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre a imagem e o texto */
+}
+
+.logo-img {
+    width: 70px; /* largura máxima da área da logo */
+    height: auto; /* altura se ajusta proporcionalmente */
+}
+
+.logo-img img {
+    width: 100%;  /* preenche a div sem sair da proporção */
+    height: auto; /* mantém a proporção */
+    display: block;
+}
+
+header .logo { 
+  font-family: 'Poppins', sans-serif; /* Fonte específica para a logo */
+  font-weight: 700;                   /* Peso da fonte em negrito */
+  font-size: 1.5rem;                  /* Tamanho da fonte da logo */
+}
+
+header nav ul { 
+  display: flex;       /* Alinha os itens da lista horizontalmente */
+  list-style: none;    /* Remove os marcadores de lista (bolinhas) */
+  gap: 2rem;           /* Espaço de 2rem entre os links */
+}
+
+header nav ul li a { 
+  color: white;           /* Cor branca para os links */
+  text-decoration: none;  /* Remove o sublinhado dos links */
+  transition: 0.3s;       /* Tempo da animação de transição */
+}
+
+header nav ul li a:hover { 
+  color: #FFD700; /* Muda a cor para dourado ao passar o mouse */
+}
+
+/* Hero */
+.hero { 
+  height: 100vh;                                          /* Ocupa a altura total da tela */
+  display: flex;                                          /* Ativa layout flexível */
+  flex-direction: column;                                 /* Alinha itens em coluna */
+  justify-content: center;                                /* Centraliza verticalmente */
+  align-items: center;                                    /* Centraliza horizontalmente */
+  text-align: center;                                     /* Centraliza o texto */
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.85), rgba(44, 44, 84, 0.90)), url('./assets/images/tech-bg.webp'); /* Fundo degradê roxo/azul e o Caminho da sua nova imagem*/
+  color: white;
+  position: relative;
+  min-height: 100vh;
+
+  /* A MÁGICA ACONTECE AQUI: */
+  /* E colocamos a imagem logo abaixo dele */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efeito Parallax: a imagem fica fixa ao rolar */
+
+}
+
+.hero h1 { 
+  font-family: 'Poppins', sans-serif; /* Fonte do título */
+  font-size: 3rem;                    /* Tamanho do título */
+  margin-bottom: 1rem;                /* Espaço abaixo do título */
+}
+
+.hero p { 
+  font-size: 1.2rem;   /* Tamanho do subtítulo */
+  margin-bottom: 2rem; /* Espaço abaixo do parágrafo */
+}
+
+.hero .cta { 
+  padding: 0.8rem 2rem;  /* Espaçamento interno do botão */
+  background: #FFD700;   /* Cor de fundo dourada */
+  color: #2C2C54;        /* Cor do texto azul escuro */
+  font-weight: 600;      /* Peso da fonte semi-negrito */
+  border-radius: 5px;    /* Arredonda as bordas do botão */
+  text-decoration: none; /* Remove sublinhado do link */
+  transition: 0.3s;      /* Tempo da animação ao interagir */
+}
+
+.hero .cta:hover { 
+  background: #FFC300; /* Muda para um dourado mais forte no hover */
+}
+
+/* Sobre Mim */
+/* Seção principal configurada como container Flex */
+/* Seção principal */
+.sobre {
+  padding: 8rem 5%;
+  background: white;
+  text-align: center; /* Garante que elementos soltos fiquem no centro */
+}
+
+/* Estilo do Título (Sempre no topo e centralizado) */
+.sobre-titulo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 3rem; /* Espaço para não "grudar" no conteúdo abaixo */
+  width: 100%;
+}
+
+/* O container que faz o Lado a Lado (Abaixo do título) */
+.sobre-container {
+  display: flex;
+  flex-direction: row; /* Texto na esquerda, Imagem na direita */
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap; /* Importante para celulares */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Coluna de Texto (Esquerda) */
+.sobre-conteudo {
+  flex: 2;
+  text-align: justify; /* O texto interno continua alinhado à esquerda para leitura */
+  min-width: 320px;
+}
+
+/* Coluna da Imagem (Direita) */
+.sobre-img-container {
+  flex: 1;
+  max-width: 350px;
+}
+
+.sobre-img-container img {
+  width: 100%;
+  height: auto;
+  /*border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border: 5px solid #f5f5f5;*/
+}
+
+/* Ajuste das Skills */
+.sobre .skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Alinhadas à esquerda dentro da coluna de texto */
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.sobre .skills span {
+  background: #2C2C54;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Projetos */
+.projetos { 
+  padding: 8rem 5%;    /* Espaçamento interno da seção */
+  background: #f0f0f0; /* Fundo cinza claro */
+}
+
+.projetos h2 { 
+  text-align: center;                 /* Centraliza o título */
+  font-family: 'Poppins', sans-serif; /* Fonte do título */
+  font-size: 2rem;                    /* Tamanho do título */
+  margin-bottom: 2rem;                /* Espaço abaixo do título */
+}
+
+.carousel { 
+  display: flex;                 /* Alinha projetos em linha */
+  gap: 2rem;                     /* Espaço entre cards de projeto */
+  overflow-x: auto;              /* Ativa barra de rolagem horizontal */
+  scroll-snap-type: x mandatory; /* Faz o scroll "prender" no card */
+  padding-bottom: 2rem;          /* Espaço extra abaixo para a barra */
+}
+
+.project { 
+  min-width: 300px;                       /* Largura mínima de cada card */
+  background: white;                      /* Fundo do card branco */
+  border-radius: 10px;                    /* Bordas arredondadas do card */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave */
+  overflow: hidden;                       /* Esconde o que sair das bordas */
+  scroll-snap-align: start;               /* Alinha o card no início ao rolar */
+  transition: 0.3s;                       /* Transição suave para efeitos */
+}
+
+.project:hover { 
+  transform: scale(1.05); /* Aumenta levemente o card ao passar o mouse */
+}
+
+.project img { 
+  width: 100%;    /* Imagem ocupa toda a largura do card */
+  display: block; /* Remove espaços vazios abaixo da imagem */
+}
+
+.project-info { 
+  padding: 1rem;      /* Espaçamento interno da info do projeto */
+  text-align: center; /* Centraliza o texto da info */
+}
+
+.project-info h3 { 
+  margin-bottom: 0.5rem; /* Espaço abaixo do título do projeto */
+}
+
+.project-info a { 
+  color: #6A0DAD;        /* Cor do link roxa */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: 600;      /* Texto em negrito */
+  transition: 0.3s;      /* Transição suave */
+}
+
+.project-info a:hover { 
+  color: #FFD700; /* Muda cor para dourado no hover */
+}
+
+/* Clientes & Depoimentos */
+.clientes { 
+  padding: 8rem 5%;   /* Espaçamento interno da seção */
+  text-align: center; /* Centraliza o conteúdo */
+  background: white;  /* Fundo branco */
+}
+
+.testimonials { 
+  display: flex;     /* Alinha depoimentos horizontalmente */
+  gap: 2rem;         /* Espaço entre cada depoimento */
+  overflow-x: auto;  /* Ativa rolagem horizontal */
+}
+
+.testimonial { 
+  min-width: 250px;         /* Largura mínima do depoimento */
+  background: #f5f5f5;      /* Fundo cinza do card de depoimento */
+  padding: 1rem;            /* Espaçamento interno */
+  border-radius: 10px;      /* Bordas arredondadas */
+  scroll-snap-align: start; /* Prende o card ao rolar */
+  flex-direction: column;   /* Alinha itens em coluna */
+  align-items: center;      /* Centraliza a foto e o texto no card */
+  text-align: center;
+}
+
+.testimonial img {
+  width: 100%;              /* Faz a imagem ocupar toda a largura do card */
+  height: 200px;            /* Define uma altura fixa para todos os cards ficarem iguais */
+  object-fit: contain;      /* MOSTRA A IMAGEM COMPLETA sem cortar nada */
+  background: #ebebeb;      /* Fundo neutro para preencher as sobras se a foto for alta */
+  border-radius: 8px;       /* Bordas levemente arredondadas (mais moderno para telas) */
+  margin-bottom: 1rem;      /* Espaço para o texto abaixo */
+  border: 1px solid #ddd;   /* Uma borda fina para destacar do fundo cinza */
+}
+
+.testimonial p { 
+  font-style: italic;   /* Texto em itálico */
+  margin-bottom: 0.5rem; /* Espaço abaixo do parágrafo */
+  font-size: 0.95rem;       /* Ajuste leve para melhor leitura */
+  color: #444;              /* Cinza escuro para melhor contraste */
+}
+
+.testimonial span {
+  font-weight: bold;        /* Para destacar o nome do cliente/empresa */
+  display: block;
+  margin-top: 0.5rem;
+  color: #2C2C54;
+}
+
+/* Contato */
+.contato { 
+  padding: 8rem 5%;    /* Espaçamento da seção */
+  background: #f0f0f0; /* Fundo cinza claro */
+  text-align: center;  /* Centraliza conteúdo */
+}
+
+.contato form { 
+  display: flex;          /* Alinha campos do form */
+  flex-direction: column; /* Coloca campos um abaixo do outro */
+  gap: 1rem;              /* Espaço entre inputs */
+  max-width: 400px;       /* Largura máxima do formulário */
+  margin: 0 auto;         /* Centraliza o form na horizontal */
+}
+
+.contato input, .contato textarea { 
+  padding: 0.8rem;      /* Espaçamento interno dos campos */
+  border-radius: 5px;   /* Arredonda bordas dos campos */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  width: 100%;          /* Ocupa toda a largura do formulário */
+}
+
+.contato button { 
+  padding: 0.8rem;     /* Espaçamento interno do botão */
+  background: #6A0DAD; /* Fundo roxo */
+  color: white;        /* Texto branco */
+  border: none;        /* Remove borda padrão */
+  font-weight: 600;    /* Negrito no texto */
+  border-radius: 5px;  /* Arredonda o botão */
+  cursor: pointer;     /* Muda o mouse para "mãozinha" */
+  transition: 0.3s;    /* Transição suave */
+}
+
+.contato button:hover { 
+  background: #FFD700; /* Fundo dourado no hover */
+  color: #2C2C54;      /* Texto azul escuro no hover */
+}
+
+/* Footer */
+footer { 
+  background: #2C2C54; /* Fundo azul escuro */
+  color: white;        /* Texto branco */
+  padding: 2rem 5%;    /* Espaçamento do rodapé */
+  text-align: center;  /* Centraliza texto */
+}
+
+footer .socials a { 
+  color: white;          /* Links sociais brancos */
+  margin: 0 1rem;        /* Espaçamento lateral entre ícones */
+  text-decoration: none; /* Remove sublinhado */
+  transition: 0.3s;      /* Transição suave */
+}
+
+footer .socials a:hover { 
+  color: #FFD700; /* Ícones dourados no hover */
+}
+
+/* Scrollbar estética */
+.carousel::-webkit-scrollbar, .testimonials::-webkit-scrollbar { 
+  height: 8px; /* Altura da barra de rolagem horizontal */
+}
+
+.carousel::-webkit-scrollbar-thumb, .testimonials::-webkit-scrollbar-thumb { 
+  background: #6A0DAD; /* Cor roxa da barra */
+  border-radius: 4px;  /* Arredonda a barra de rolagem */
+}
+
+/* #### Cursor do Mouse Animado #### */
+
+/* Container Principal do Pac-Man */
+.pacman-cursor {
+  width: 40px;               /* Tamanho do Pac-Man */
+  height: 40px;
+  position: fixed;          /* Fixado na tela, acima de tudo */
+  pointer-events: none;      /* Importante: O mouse NÃO clica nele, clica no site */
+  z-index: 10000;            /* Sempre acima de tudo */
+  transform: translate(-50%, -50%); /* Centraliza o desenho exatamente no ponto do mouse */
+  transition: transform 0.1s ease-out; /* Dá um leve "atraso" para parecer que ele está perseguindo */
+  display: none;             /* Começa escondido, aparece quando o mouse se move */
+}
+
+/* O corpo e a animação da boca */
+.pacman-boca {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #FFD700;       /* A cor dourada/amarela do seu degradê */
+  position: relative;
+  /* Cria o corte da boca usando máscara/clipping */
+  clip-path: polygon(100% 50%, 50% 50%, 100% 50%, 100% 100%, 0% 100%, 0% 0%, 100% 0%);
+  animation: pacman-mastigar 0.3s ease-in-out infinite alternate; /* Animação de mastigar */
+}
+
+/* Animação que abre e fecha a boca (gira o clipping) */
+@keyframes pacman-mastigar {
+  0% {
+    clip-path: polygon(100% 50%, 50% 50%, 100% 50%, 100% 100%, 0% 100%, 0% 0%, 100% 0%);
+  }
+  100% {
+    /* Boca totalmente aberta */
+    clip-path: polygon(100% 15%, 50% 50%, 100% 85%, 100% 100%, 0% 100%, 0% 0%, 100% 0%);
+  }
+}
+
+/* Mostra o Pac-Man apenas quando o mouse está na tela */
+body:hover .pacman-cursor {
+  display: block;
+}
+
+/* #### RESPONSIVIDADE (Mobile) #### */
+
+/* Esconder o ícone do hambúrguer no Desktop */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    /* 1. Ajuste da Logo e Nome */
+    .logo-img {
+        width: 45px; /* Reduz a imagem da logo */
+    }
+    
+    header .logo {
+        font-size: 1.1rem; /* Reduz o tamanho do texto do nome */
+    }
+
+    /* 2. Mostrar o ícone hambúrguer */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 3. Transformar o Nav em menu lateral */
+    header nav {
+        position: fixed;
+        top: 70px; /* Abaixo do header */
+        right: -100%; /* Começa escondido fora da tela */
+        background: #2C2C54;
+        width: 70%;
+        height: 100vh;
+        transition: 0.4s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Quando o menu estiver ativo via JavaScript */
+    header nav.active {
+        right: 0 !important; /* Força o menu a aparecer vindo da direita */
+        display: block;      /* Garante que ele não esteja com display: none */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Links um abaixo do outro */
+        align-items: center;
+        padding-top: 2rem;
+        gap: 1.5rem;
+    }
+
+    /* 4. Esconder o Pacman no Mobile (opcional, melhora a UX) */
+    .pacman-cursor {
+        display: none !important;
+    }
+}
+/* #### CONTATO VIA WHATSAPP #### */
+.whatsapp-float {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float span { display: none; } /* No mobile, fica apenas o ícone */
+    .whatsapp-float { padding: 15px; border-radius: 50%; }
+}

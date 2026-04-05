@@ -1,0 +1,112 @@
+/* Aplica regras globais a todos os elementos */
+* {
+    margin: 0; /* Remove a margem padrão dos elementos */
+    padding: 0; /* Remove o padding padrão dos elementos */
+    box-sizing: border-box; /* Inclui padding e border na largura e altura do elemento */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão do site */
+    color: white; /* Define a cor do texto como branco */
+}
+
+/* Define largura e altura completas para html e body */
+html,
+body {
+    width: 100%;  /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+    margin: 0;
+    overflow: hidden; /* Para que as estrelas não criem scroll */
+    background-color: black;
+}
+
+/* Container principal da página */
+#main {
+    height: 100%; /* Ocupa toda a altura da tela */
+    width: 100%;  /* Ocupa toda a largura da tela */
+    background-color: black; /* Fundo preto */
+}
+
+/* Barra de navegação */
+#nav {
+    display: flex; /* Ativa o Flexbox para layout horizontal */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: space-between; /* Espaça os itens uniformemente nas extremidades */
+    height: 60px; /* Altura da barra de navegação */
+    padding: 0 30px; /* Espaçamento interno horizontal */
+}
+
+/* Parte 2 da navegação (ex.: links ou ícones à direita) */
+#nav-part2 {
+    display: flex; /* Flexbox horizontal */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 30px; /* Espaço de 30px entre cada item */
+}
+
+/* Estilo dos títulos h3 dentro da nav */
+#nav h3 {
+    font-size: 25px; /* Tamanho da fonte */
+    text-transform: uppercase; /* Converte texto para maiúsculas */
+    font-weight: 400; /* Peso da fonte normal */
+}
+
+/* Estilo principal dos títulos h1 no #main */
+#main h1 {
+    font-size: 150px; /* Tamanho gigante do texto */
+    text-transform: uppercase; /* Converte para maiúsculas */
+    font-weight: 400; /* Peso da fonte normal */
+    line-height: 120px; /* Altura de linha interna (espaço entre linhas de um h1 multiline) */
+    width: 80%; /* Largura do h1 limitada a 80% do container */
+    margin-left: 10%; /* Centraliza horizontalmente (esquerda = 10%) */
+    margin-bottom: 20px; /* Espaço entre cada h1 */
+    position: relative; /* Para permitir z-index */
+    z-index: 10; /* Coloca o h1 acima de elementos com z-index menor */
+}
+
+/* Ajustes específicos para o segundo h1 */
+#main h1:nth-child(2){
+    margin-top: 180px; /* Adiciona espaço extra acima do segundo h1 */
+}
+
+/* Centraliza o terceiro h1 horizontalmente */
+#main h1:nth-child(3){
+    text-align: center;
+}
+
+/* Centraliza o quarto h1 horizontalmente */
+#main h1:nth-child(4){
+    text-align: center;
+}
+
+/* Estilo global para imagens */
+img {
+    height: 400px; /* Altura fixa da imagem */
+    width: auto; /* Mantém proporção da largura automaticamente */
+    position: absolute; /* Posicionamento absoluto em relação ao container pai */
+    top: 12%; /* Distância do topo do container */
+    left: 40%; /* Distância da esquerda do container */
+}
+
+/* Ajustes específicos para a primeira imagem (#img1) */
+#img1 {
+    rotate: 20deg; /* Rotaciona a imagem 20 graus */
+    left: 65%; /* Ajusta posição horizontal */
+}
+
+/* Ajustes específicos para a segunda imagem (#img2) */
+#img2 {
+    rotate: 10deg; /* Rotaciona a imagem 10 graus */
+    left: 55%; /* Ajusta posição horizontal */
+}
+
+/* Classe extra para títulos principais, mudando a fonte */
+.main_title{
+    font-family: Arial, Helvetica, sans-serif; /* Sobrescreve a fonte padrão */
+}
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, #f0f 70%);
+  pointer-events: none; /* Para não atrapalhar o mouse */
+  z-index: 1000;
+}

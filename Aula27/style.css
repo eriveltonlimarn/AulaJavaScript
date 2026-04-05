@@ -1,0 +1,165 @@
+/* --- CONFIGURAÇÕES GLOBAIS --- */
+
+/* :root armazena variáveis que facilitam a manutenção do tema do site */
+:root {
+    --primary-color: #4a90e2;    /* Cor principal (azul) */
+    --secondary-color: #f5f7fa;  /* Fundo da página (cinza muito claro) */
+    --text-color: #333;          /* Cor padrão do texto */
+    --accent-color: #e74c3c;     /* Cor de destaque/alerta (vermelho) */
+    --white: #ffffff;            /* Cor branca pura */
+    --shadow: 0 10px 25px rgba(0,0,0,0.1); /* Sombra suave para dar profundidade */
+}
+
+/* O seletor '*' reseta as margens e paddings padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding/bordas não aumentem o tamanho do elemento */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna e legível */
+    background-color: var(--secondary-color); /* Aplica a cor de fundo definida no :root */
+    color: var(--text-color);
+    display: flex;             /* Ativa o Flexbox para centralizar o conteúdo */
+    justify-content: center;   /* Centraliza horizontalmente */
+    padding: 40px 20px;        /* Espaçamento interno nas laterais e topo */
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+
+.container {
+    background: var(--white);
+    padding: 2.5rem;           /* Espaçamento interno de 40px (baseado em 16px por rem) */
+    border-radius: 15px;       /* Bordas arredondadas (estilo moderno) */
+    box-shadow: var(--shadow); /* Aplica a sombra definida nas variáveis */
+    width: 100%;               /* Ocupa a largura disponível... */
+    max-width: 450px;          /* ...até o limite de 450px */
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;       /* Espaço entre o título e o formulário */
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;    /* Deixa as letras um pouco mais juntas e elegantes */
+}
+
+/* --- FORMULÁRIO DE ENTRADA --- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;    /* Coloca os inputs um abaixo do outro */
+    gap: 12px;                 /* Espaçamento automático entre os elementos do grupo */
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 14px;
+    border: 2px solid #e1e4e8; /* Borda cinza clara e fina */
+    border-radius: 10px;
+    outline: none;             /* Remove a borda padrão "feia" ao clicar */
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Suaviza a mudança de cor quando ganha foco */
+}
+
+/* Estilo aplicado quando o usuário clica para digitar no input */
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1); /* Cria um brilho azul ao redor */
+}
+
+button {
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;           /* Muda o mouse para a "mãozinha" */
+    font-weight: 600;          /* Texto do botão levemente em negrito */
+    font-size: 1rem;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #357abd; /* Escurece um pouco o azul */
+}
+
+/* Efeito visual de "clique" (o botão diminui levemente) */
+button:active {
+    transform: scale(0.97);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eee; /* Linha divisória muito sutil */
+    margin-bottom: 1.5rem;
+}
+
+/* --- LISTA DE CONTATOS --- */
+
+.contact-list {
+    list-style: none;          /* Remove as "bolinhas" padrão da lista (ul) */
+}
+
+.contact-item {
+    background: var(--white);
+    border-bottom: 1px solid #f0f0f0; /* Linha entre cada contato */
+    padding: 15px 5px;
+    display: flex;             /* Alinha informações e botão de excluir na mesma linha */
+    justify-content: space-between; /* Nome à esquerda, botão à direita */
+    align-items: center;       /* Centraliza verticalmente o conteúdo da linha */
+    transition: background 0.2s;
+}
+
+/* Remove a borda do último item da lista para não sobrar espaço vazio */
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-info b {
+    display: block;            /* Força o nome a ocupar uma linha própria */
+    color: #2c3e50;            /* Azul escuro quase preto */
+    font-size: 1.05rem;
+}
+
+.contact-info span {
+    color: #7f8c8d;            /* Cinza para o número do telefone (hierarquia visual) */
+    font-size: 0.9rem;
+}
+
+/* Estilização específica do botão de excluir */
+.btn-delete {
+    background-color: var(--accent-color);
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    width: auto;               /* Ajusta o tamanho apenas ao texto "Excluir" */
+}
+
+.btn-delete:hover {
+    background-color: #c0392b; /* Vermelho mais forte ao passar o mouse */
+}
+
+/* Estilização do botão de editar */
+.btn-edit {
+    background-color: #f1c40f; /* Define a cor amarela (padrão para avisos/edição) */
+    padding: 8px 12px;         /* Espaçamento interno (altura e largura) */
+    font-size: 0.75rem;        /* Tamanho da fonte um pouco menor que o padrão */
+    margin-right: 5px;          /* Cria um espaço à direita para não colar no botão excluir */
+    color: #333;               /* Cor do texto escura para dar leitura sobre o amarelo */
+    border: none;              /* Remove a borda padrão do navegador */
+    border-radius: 6px;        /* Arredonda levemente os cantos do botão */
+    cursor: pointer;           /* Transforma o mouse em 'mãozinha' ao passar por cima */
+    font-weight: bold;         /* Deixa o texto do botão em negrito */
+}
+
+/* Efeito visual ao passar o mouse no botão editar */
+.btn-edit:hover {
+    background-color: #d4ac0d; /* Escurece o amarelo para dar feedback de interação */
+}
+
+/* Container para organizar os botões de ação (Editar e Excluir) */
+.actions {
+    display: flex;             /* Alinha os botões um ao lado do outro */
+}
